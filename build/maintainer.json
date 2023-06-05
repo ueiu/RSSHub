@@ -65,6 +65,14 @@
     "/0818tuan/:listId?": [
         "TonyRL"
     ],
+    "/141jav/:type?/:keyword?": [
+        "cgkings",
+        "nczitzk"
+    ],
+    "/141ppv/:type?/:keyword?": [
+        "cgkings",
+        "nczitzk"
+    ],
     "/18comic/album/:id": [
         "nczitzk"
     ],
@@ -275,6 +283,12 @@
     ],
     "/aeaweb/:id": [
         "nczitzk"
+    ],
+    "/aeon/category/:category": [
+        "emdoe"
+    ],
+    "/aeon/:type": [
+        "emdoe"
     ],
     "/agefans/detail/:id": [
         "s2marine"
@@ -1394,6 +1408,9 @@
     "/dhu/xxgk/news": [
         "KiraKiseki"
     ],
+    "/dhu/yjs/zs/:type?": [
+        "fox2049"
+    ],
     "/diandong/news/:cate?": [
         "Fatpandac"
     ],
@@ -1664,6 +1681,9 @@
     ],
     "/eastmoney/ttjj/user/:uid": [
         "zidekuls"
+    ],
+    "/eastmoney/report/:category": [
+        "syzq"
     ],
     "/eastmoney/search/:keyword": [
         "drgnchan"
@@ -3792,6 +3812,9 @@
     "/nogizaka46/blog": [
         "Kasper4649"
     ],
+    "/notateslaapp/ota": [
+        "mrbruce516"
+    ],
     "/notefolio/search/:category?/:order?/:time?/:query?": [
         "BianTan"
     ],
@@ -5663,6 +5686,9 @@
     "/wikinews/latest": [
         "KotoriK"
     ],
+    "/winstall/:appId": [
+        "TonyRL"
+    ],
     "/wise/pair/:source/:target": [
         "HenryQW"
     ],
@@ -6588,7 +6614,6 @@
     "/maxnews/dota2": [],
     "/ningmeng/song": [],
     "/zzz/:category?/:language?": [],
-    "/aeon/:cid": [],
     "/algocasts": [],
     "/aqicn/:city/:pollution?": [],
     "/maoyan/hot": [],
@@ -6999,8 +7024,6 @@
     "/jlu/oa": [],
     "/hfut/tzgg": [],
     "/onejav/:type/:key?": [],
-    "/141jav/:type/:key?": [],
-    "/141ppv/:type/:key?": [],
     "/curiouscat/user/:id": [],
     "/newsmth/account/:id": [],
     "/newsmth/section/:section": [],
@@ -7142,7 +7165,6 @@
     "/gvm/index/:category?": [],
     "/chuapp/index/:category?": [],
     "/deloitte/industries/:category?": [],
-    "/tesla": [],
     "/fudan/cce": [],
     "/lowendtalk/discussion/:id?": [],
     "/proletar/:type?/:id?": [],

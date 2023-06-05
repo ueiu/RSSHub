@@ -145,6 +145,66 @@
         source:[ "/:listId",
           "/" ],
         target:(params) => `/0818tuan${params.listId ? '/' + params.listId.replace('list-', '').replace('-0.html', '') : ''}` } ] },
+  "141jav.com":{ _name:"141JAV",
+    ".":[ { title:"今日种子",
+        docs:"https://docs.rsshub.app/multimedia.html#_141jav",
+        source:"/",
+        target:(params, url, document) => {
+                    const today = document.querySelector('div.card.mb-1.card-overview').getAttribute('data-date').replace(/-/g, '');
+                    return `/141jav/day/${today}`;
+                } },
+      { title:"今日演员",
+        docs:"https://docs.rsshub.app/multimedia.html#_141jav",
+        source:"/",
+        target:(params, url, document) => {
+                    const star = document.querySelector('div.card-content > div > a').getAttribute('href');
+                    return `/141jav${star}`;
+                } },
+      { title:"页面种子",
+        docs:"https://docs.rsshub.app/multimedia.html#_141jav",
+        source:[ "/:type",
+          "/:type/:key",
+          "/:type/:key/:morekey" ],
+        target:(params, url, document) => {
+                    const itype = params.morekey === undefined ? params.type : params.type === 'tag' ? 'tag' : 'day';
+                    let ikey = `${itype === 'day' ? params.type : ''}${params.key || ''}${itype === 'tag' && params.morekey !== undefined ? '%2F' : ''}${params.morekey || ''}`;
+                    if (ikey === '' && itype === 'tag') {
+                        ikey = document.querySelector('div.thumbnail.is-inline > a').getAttribute('href').replace('/tag/', '').replace(/\//g, '%2F');
+                    } else if (ikey === '' && itype === 'actress') {
+                        ikey = document.querySelector('div.card > a').getAttribute('href').replace('/actress/', '');
+                    }
+                    return `/141jav/${itype}/${ikey}`;
+                } } ] },
+  "141ppv.com":{ _name:"141JAV",
+    ".":[ { title:"今日种子",
+        docs:"https://docs.rsshub.app/multimedia.html#_141ppv",
+        source:"/",
+        target:(params, url, document) => {
+                    const today = document.querySelector('div.card.mb-1.card-overview').getAttribute('data-date').replace(/-/g, '');
+                    return `/141ppv/day/${today}`;
+                } },
+      { title:"今日演员",
+        docs:"https://docs.rsshub.app/multimedia.html#_141ppv",
+        source:"/",
+        target:(params, url, document) => {
+                    const star = document.querySelector('div.card-content > div > a').getAttribute('href');
+                    return `/141ppv${star}`;
+                } },
+      { title:"页面种子",
+        docs:"https://docs.rsshub.app/multimedia.html#_141ppv",
+        source:[ "/:type",
+          "/:type/:key",
+          "/:type/:key/:morekey" ],
+        target:(params, url, document) => {
+                    const itype = params.morekey === undefined ? params.type : params.type === 'tag' ? 'tag' : 'day';
+                    let ikey = `${itype === 'day' ? params.type : ''}${params.key || ''}${itype === 'tag' && params.morekey !== undefined ? '%2F' : ''}${params.morekey || ''}`;
+                    if (ikey === '' && itype === 'tag') {
+                        ikey = document.querySelector('div.thumbnail.is-inline > a').getAttribute('href').replace('/tag/', '').replace(/\//g, '%2F');
+                    } else if (ikey === '' && itype === 'actress') {
+                        ikey = document.querySelector('div.card > a').getAttribute('href').replace('/actress/', '');
+                    }
+                    return `/141ppv/${itype}/${ikey}`;
+                } } ] },
   "18comic.org":{ _name:"禁漫天堂",
     ".":[ { title:"成人 A 漫",
         docs:"https://docs.rsshub.app/anime.html#jin-man-tian-tang-cheng-ren-a-man",
@@ -813,6 +873,15 @@
         source:[ "/journals/:id",
           "/" ],
         target:"/aeaweb/:id" } ] },
+  "aeon.co":{ _name:"AEON",
+    aeon:[ { title:"Types (Essays, Videos, or Audio)",
+        docs:"https://docs.rsshub.app/new-media.html##aeon",
+        source:[ "/:type" ],
+        target:"/aeon/:type" },
+      { title:"Category",
+        docs:"https://docs.rsshub.app/new-media.html##aeon",
+        source:[ "/:category" ],
+        target:"/aeon/category/:category" } ] },
   "agemys.cc":{ _name:"AGE动漫",
     ".":[ { title:"最近更新",
         docs:"https://docs.rsshub.app/anime.html#age-dong-man",
@@ -2960,6 +3029,8 @@
     jw:[ { title:"教务处通知",
         docs:"https://docs.rsshub.app/university.html#dong-hua-da-xue" } ],
     xxgk:[ { title:"最新信息公开",
+        docs:"https://docs.rsshub.app/university.html#dong-hua-da-xue" } ],
+    yjs:[ { title:"研究生信息",
         docs:"https://docs.rsshub.app/university.html#dong-hua-da-xue" } ] },
   "diandong.com":{ _name:"电动邦",
     ".":[ { title:"资讯",
@@ -3409,6 +3480,10 @@
         source:"/",
         target:"/eastday/portrait" } ] },
   "eastmoney.com":{ _name:"东方财富",
+    data:[ { title:"研究报告",
+        docs:"https://docs.rsshub.app/finance.html#dong-fang-cai-fu",
+        source:[ "/report/:category" ],
+        target:"/eastmoney/report/:category" } ],
     fundbarmob:[ { title:"天天基金用户动态",
         docs:"https://docs.rsshub.app/finance.html#dong-fang-cai-fu",
         source:[ "/" ],
@@ -8683,6 +8758,13 @@
         docs:"https://docs.rsshub.app/new-media.html#ban-dao-xi-lie-guan-wang-zi-xun-nai-mu-ban-46-bo-ke",
         source:[ "/s/n46/diary/MEMBER" ],
         target:"/nogizaka46/blog" } ] },
+  "notateslaapp.com":{ _name:"Not a Tesla App",
+    ".":[ { title:"特斯拉系统更新",
+        docs:"https://docs.rsshub.app/program-update.html#not-a-tesla-app",
+        source:[ "/software-updates/history",
+          "/software-updates",
+          "/" ],
+        target:"/notateslaapp/ota" } ] },
   "notefolio.net":{ _name:"Notefolio",
     ".":[ { title:"Search",
         docs:"https://docs.rsshub.app/design.html#notefolio",
@@ -12555,6 +12637,11 @@
         docs:"https://docs.rsshub.app/new-media.html#wei-ji-xin-wen",
         source:[ "/wiki/Special:新闻订阅" ],
         target:"/wikinews/latest" } ] },
+  "winstall.app":{ _name:"winstall",
+    ".":[ { title:"应用更新",
+        docs:"https://docs.rsshub.app/program-update.html#winstall",
+        source:[ "/apps/:appId" ],
+        target:"/winstall/:appId" } ] },
   "wise.com":{ _name:"Wise",
     ".":[ { title:"昨日汇率变动",
         docs:"https://docs.rsshub.app/other.html#wise" } ] },
@@ -13864,66 +13951,6 @@
                         ikey = document.querySelector('div.card > a').getAttribute('href').replace('/actress/', '');
                     }
                     return `/onejav/${itype}/${ikey}`;
-                } } ] },
-  "141jav.com":{ _name:"141JAV BT",
-    ".":[ { title:"今日种子",
-        docs:"https://docs.rsshub.app/multimedia.html#141jav",
-        source:"/",
-        target:(params, url, document) => {
-                    const today = document.querySelector('div.card.mb-1.card-overview').getAttribute('data-date').replace(/-/g, '');
-                    return `/141jav/day/${today}`;
-                } },
-      { title:"今日演员",
-        docs:"https://docs.rsshub.app/multimedia.html#141jav",
-        source:"/",
-        target:(params, url, document) => {
-                    const star = document.querySelector('div.card-content > div > a').getAttribute('href');
-                    return `/141jav${star}`;
-                } },
-      { title:"页面种子",
-        docs:"https://docs.rsshub.app/multimedia.html#141jav",
-        source:[ "/:type",
-          "/:type/:key",
-          "/:type/:key/:morekey" ],
-        target:(params, url, document) => {
-                    const itype = params.morekey === undefined ? params.type : params.type === 'tag' ? 'tag' : 'day';
-                    let ikey = `${itype === 'day' ? params.type : ''}${params.key || ''}${itype === 'tag' && params.morekey !== undefined ? '%2F' : ''}${params.morekey || ''}`;
-                    if (ikey === '' && itype === 'tag') {
-                        ikey = document.querySelector('div.thumbnail.is-inline > a').getAttribute('href').replace('/tag/', '').replace('/', '%2F');
-                    } else if (ikey === '' && itype === 'actress') {
-                        ikey = document.querySelector('div.card > a').getAttribute('href').replace('/actress/', '');
-                    }
-                    return `/141jav/${itype}/${ikey}`;
-                } } ] },
-  "141ppv.com":{ _name:"141ppv BT",
-    ".":[ { title:"今日种子",
-        docs:"https://docs.rsshub.app/multimedia.html#141pvp",
-        source:"/",
-        target:(params, url, document) => {
-                    const today = document.querySelector('div.card.mb-1.card-overview').getAttribute('data-date').replace(/-/g, '');
-                    return `/141ppv/day/${today}`;
-                } },
-      { title:"今日演员",
-        docs:"https://docs.rsshub.app/multimedia.html#141ppv",
-        source:"/",
-        target:(params, url, document) => {
-                    const star = document.querySelector('div.card-content > div > a').getAttribute('href');
-                    return `/141ppv${star}`;
-                } },
-      { title:"页面种子",
-        docs:"https://docs.rsshub.app/multimedia.html#141ppv",
-        source:[ "/:type",
-          "/:type/:key",
-          "/:type/:key/:morekey" ],
-        target:(params, url, document) => {
-                    const itype = params.morekey === undefined ? params.type : params.type === 'tag' ? 'tag' : 'day';
-                    let ikey = `${itype === 'day' ? params.type : ''}${params.key || ''}${itype === 'tag' && params.morekey !== undefined ? '%2F' : ''}${params.morekey || ''}`;
-                    if (ikey === '' && itype === 'tag') {
-                        ikey = document.querySelector('div.thumbnail.is-inline > a').getAttribute('href').replace('/tag/', '').replace('/', '%2F');
-                    } else if (ikey === '' && itype === 'actress') {
-                        ikey = document.querySelector('div.card > a').getAttribute('href').replace('/actress/', '');
-                    }
-                    return `/141ppv/${itype}/${ikey}`;
                 } } ] },
   "sexinsex.net":{ _name:"sexinsex",
     ".":[ { title:"分区帖子",
