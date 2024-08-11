@@ -187,6 +187,9 @@
   "/51cto/index/recommend": [
     "cnkmmk"
   ],
+  "/51read/article/:id": [
+    "lazwa34"
+  ],
   "/52hrtt/:area?/:type?": [
     "nczitzk"
   ],
@@ -3883,6 +3886,9 @@
   "/misskey/notes/featured/:site": [
     "Misaka13514"
   ],
+  "/misskey/users/notes/:username": [
+    "siygle"
+  ],
   "/mittrchina/:type?": [
     "EsuRt",
     "queensferryme"
@@ -5349,6 +5355,9 @@
   "/showstart/search/:type/:keyword?": [
     "lchtao26"
   ],
+  "/showstart/site/:siteId": [
+    "lchtao26"
+  ],
   "/shu/:type?": [
     "lonelyion"
   ],
@@ -5712,7 +5721,7 @@
   "/szu/yz/:type?": [
     "NagaruZ"
   ],
-  "/t66y/:id/:type?": [
+  "/t66y/:id/:type?/:search?": [
     "zhboner"
   ],
   "/t66y/post/:tid": [
@@ -5834,6 +5843,9 @@
   ],
   "/tgbus/list/:category": [
     "Xzonn"
+  ],
+  "/the/:filter{.+}?": [
+    "nczitzk"
   ],
   "/theatlantic/:category": [
     "EthanWng97"
