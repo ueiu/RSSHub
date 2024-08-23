@@ -1279,6 +1279,14 @@
         "target": "/apnews/rss/:rss"
       },
       {
+        "title": "Sitemap",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/"
+        ],
+        "target": "/apnews/sitemap/:route"
+      },
+      {
         "title": "Topics",
         "docs": "https://docs.rsshub.app/routes/traditional-media",
         "source": [
@@ -3136,7 +3144,7 @@
           "/lm/xwlb",
           "/"
         ],
-        "target": "/cctv/xwlb"
+        "target": "/cctv/:site/:category/:name"
       }
     ],
     "navi": [
@@ -4585,7 +4593,7 @@
     ".": [
       {
         "title": "Official Blogs",
-        "docs": "https://docs.rsshub.app/routes/blog",
+        "docs": "https://docs.rsshub.app/routes/game",
         "source": [
           "/blog"
         ],
@@ -5808,6 +5816,19 @@
       }
     ]
   },
+  "flashcat.cloud": {
+    "_name": "Flashcat",
+    ".": [
+      {
+        "title": "快猫星云博客",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/blog"
+        ],
+        "target": "/flashcat/blog"
+      }
+    ]
+  },
   "flyert.com": {
     "_name": "飞客茶馆",
     ".": [
@@ -6000,6 +6021,19 @@
           "/book/:id"
         ],
         "target": "/freexcomic/book/:id"
+      }
+    ]
+  },
+  "ftm.eu": {
+    "_name": "Follow The Money",
+    "www": [
+      {
+        "title": "文章",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/ftm/"
       }
     ]
   },
@@ -6267,6 +6301,19 @@
           "/list/group/:id"
         ],
         "target": "/gihyo/list/group/:id"
+      }
+    ]
+  },
+  "gisreportsonline.com": {
+    "_name": "GIS Reports",
+    "www": [
+      {
+        "title": "报告",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/gisreportsonline/:path{.*}"
       }
     ]
   },
@@ -6863,6 +6910,227 @@
       }
     ]
   },
+  "lswz.gov.cn": {
+    "_name": "上海市人民政府",
+    "www": [
+      {
+        "title": "国家粮食和物资储备局",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/:category"
+        ],
+        "target": "/govparams=>{const category=params.category;return`/gov/lswz${category?`/${category}`:\"\"}`}"
+      },
+      {
+        "title": "新闻发布",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/xinwen/index.shtml"
+        ],
+        "target": "/gov/lswz/html/xinwen/index"
+      },
+      {
+        "title": "党建工作",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/djgz/index.shtml"
+        ],
+        "target": "/gov/lswz/html/djgz/index"
+      },
+      {
+        "title": "业务频道 - 粮食调控",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/lstk/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/lstk/index"
+      },
+      {
+        "title": "业务频道 - 物资储备",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/wzcb/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/wzcb/index"
+      },
+      {
+        "title": "业务频道 - 能源储备",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/nycb/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/nycb/index"
+      },
+      {
+        "title": "业务频道 - 安全应急",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/aqyj/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/aqyj/index"
+      },
+      {
+        "title": "业务频道 - 法规体改",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/fgtg/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/fgtg/index"
+      },
+      {
+        "title": "业务频道 - 规划建设",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/gjks/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/gjks/index"
+      },
+      {
+        "title": "业务频道 - 财务审计",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/cwsj/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/cwsj/index"
+      },
+      {
+        "title": "业务频道 - 仓储科技",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/cckj/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/cckj/index"
+      },
+      {
+        "title": "业务频道 - 执法督查",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/zfdc/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/zfdc/index"
+      },
+      {
+        "title": "业务频道 - 国际交流",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/gjjl/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/gjjl/index"
+      },
+      {
+        "title": "业务频道 - 人事人才",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/rsrc/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/rsrc/index"
+      },
+      {
+        "title": "业务频道 - 标准质量",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/bzzl/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/bzzl/index"
+      },
+      {
+        "title": "业务频道 - 粮食和储备研究",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/ywpd/lshcbyj/index.shtml"
+        ],
+        "target": "/gov/lswz/html/ywpd/lshcbyj/index"
+      },
+      {
+        "title": "政策发布 - 文件",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zcfb/wenjian.shtml"
+        ],
+        "target": "/gov/lswz/html/zcfb/wenjian"
+      },
+      {
+        "title": "政策发布 - 法律法规",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zcfb/fggz-fg.shtml"
+        ],
+        "target": "/gov/lswz/html/zcfb/fggz-fg"
+      },
+      {
+        "title": "政策发布 - 规章",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zcfb/fggz-gz.shtml"
+        ],
+        "target": "/gov/lswz/html/zcfb/fggz-gz"
+      },
+      {
+        "title": "通知公告 - 行政通知",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/tzgg/xztz.shtml"
+        ],
+        "target": "/gov/lswz/html/tzgg/xztz"
+      },
+      {
+        "title": "通知公告 - 公告通告",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/tzgg/ggtg.shtml"
+        ],
+        "target": "/gov/lswz/html/tzgg/ggtg"
+      },
+      {
+        "title": "粮食收购 - 收购数据",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zmhd/lysj/lssg-szym.shtml"
+        ],
+        "target": "/gov/lswz/html/zmhd/lysj/lssg-szym"
+      },
+      {
+        "title": "粮食收购 - 政策·解读",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zmhd/lysj/lssg-gzdt.shtml"
+        ],
+        "target": "/gov/lswz/html/zmhd/lysj/lssg-gzdt"
+      },
+      {
+        "title": "粮食价格 - 市场监测",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zmhd/lysj/lsjg-scjc.shtml"
+        ],
+        "target": "/gov/lswz/html/zmhd/lysj/lsjg-scjc"
+      },
+      {
+        "title": "粮食价格 - 市场价格",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zmhd/lysj/lsjg-scjg.shtml"
+        ],
+        "target": "/gov/lswz/html/zmhd/lysj/lsjg-scjg"
+      },
+      {
+        "title": "粮食交易",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zmhd/lysj/lsjy.shtml"
+        ],
+        "target": "/gov/lswz/html/zmhd/lysj/lsjy"
+      },
+      {
+        "title": "粮食质量",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/html/zmhd/lysj/lszl.shtml"
+        ],
+        "target": "/gov/lswz/html/zmhd/lysj/lszl"
+      }
+    ]
+  },
   "mee.gov.cn": {
     "_name": "上海市人民政府",
     "www": [
@@ -7286,6 +7554,29 @@
           "/"
         ],
         "target": "/gov/zhengce/wenjian"
+      }
+    ]
+  },
+  "ningbo.gov.cn": {
+    "_name": "上海市人民政府",
+    "gzw": [
+      {
+        "title": "宁波市国资委-公告",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/col/col1229116730/index.html"
+        ],
+        "target": "/gov/zj/ningbogzw-notice/:colId?"
+      }
+    ],
+    "rsj": [
+      {
+        "title": "宁波市人力资源和社会保障局-公告",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/col/col1229676740/index.html"
+        ],
+        "target": "/gov/zj/ningborsjnotice/:colId?"
       }
     ]
   },
@@ -7943,6 +8234,19 @@
   },
   "hket.com": {
     "_name": "香港经济日报",
+    "china": [
+      {
+        "title": "新闻",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/:category/*",
+          "/:category/*",
+          "/:category/*",
+          "/:category/*"
+        ],
+        "target": "/hket/:category"
+      }
+    ],
     "www": [
       {
         "title": "新闻",
@@ -7950,7 +8254,7 @@
         "source": [
           "/"
         ],
-        "target": "/hket/:category?"
+        "target": "/hket/"
       }
     ]
   },
@@ -8011,6 +8315,19 @@
           "/"
         ],
         "target": "/hongkong/dh/:language?"
+      }
+    ]
+  },
+  "hottoys.com.hk": {
+    "_name": "Hot Toys",
+    ".": [
+      {
+        "title": "Toys List",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/"
+        ],
+        "target": "/hottoys/"
       }
     ]
   },
@@ -8791,6 +9108,19 @@
       }
     ]
   },
+  "imop.com": {
+    "_name": "imop",
+    "t": [
+      {
+        "title": "全部消息",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/"
+        ],
+        "target": "/imop/tianshu"
+      }
+    ]
+  },
   "indiansinkuwait.com": {
     "_name": "Indians in Kuwait",
     ".": [
@@ -8880,6 +9210,14 @@
   "infzm.com": {
     "_name": "infzm",
     ".": [
+      {
+        "title": "热门文章",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/"
+        ],
+        "target": "/infzm/hot"
+      },
       {
         "title": "频道",
         "docs": "https://docs.rsshub.app/routes/traditional-media",
@@ -9419,6 +9757,123 @@
           "/xwzx/zsjy.htm"
         ],
         "target": "/jlu/ccst/xwzx/:category"
+      }
+    ]
+  },
+  "joins.com": {
+    "_name": "中央日报",
+    "chinese": [
+      {
+        "title": "中央日报中文版",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html"
+        ],
+        "target": "/joinsurl=>{const category=url.searchParams.get(\"sc_section_code\");return`/joins/chinese${category?`/${category}`:\"\"}`}"
+      },
+      {
+        "title": "财经",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N1"
+        ],
+        "target": "/joins/chinese/S1N1"
+      },
+      {
+        "title": "国际",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N2"
+        ],
+        "target": "/joins/chinese/S1N2"
+      },
+      {
+        "title": "北韩",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N3"
+        ],
+        "target": "/joins/chinese/S1N3"
+      },
+      {
+        "title": "政治·社会",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N4"
+        ],
+        "target": "/joins/chinese/S1N4"
+      },
+      {
+        "title": "中国观察",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N5"
+        ],
+        "target": "/joins/chinese/S1N5"
+      },
+      {
+        "title": "社论",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N26"
+        ],
+        "target": "/joins/chinese/S1N26"
+      },
+      {
+        "title": "专栏·观点",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N11"
+        ],
+        "target": "/joins/chinese/S1N11"
+      },
+      {
+        "title": "军事·科技",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N6"
+        ],
+        "target": "/joins/chinese/S1N6"
+      },
+      {
+        "title": "娱乐体育",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N7"
+        ],
+        "target": "/joins/chinese/S1N7"
+      },
+      {
+        "title": "教育",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N8"
+        ],
+        "target": "/joins/chinese/S1N8"
+      },
+      {
+        "title": "旅游美食",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N9"
+        ],
+        "target": "/joins/chinese/S1N9"
+      },
+      {
+        "title": "时尚",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N10"
+        ],
+        "target": "/joins/chinese/S1N10"
+      },
+      {
+        "title": "图集",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/news/articleList.html?sc_section_code=S1N12"
+        ],
+        "target": "/joins/chinese/S1N12"
       }
     ]
   },
@@ -10169,6 +10624,19 @@
           "/"
         ],
         "target": "/lkong/thread/:id"
+      }
+    ]
+  },
+  "lmu.de": {
+    "_name": "Ludwig Maximilian University of Munich",
+    "www": [
+      {
+        "title": "Job Openings",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/en/about-lmu/working-at-lmu/job-portal/academic-staff/"
+        ],
+        "target": "/lmu/lmu/jobs"
       }
     ]
   },
@@ -11744,9 +12212,9 @@
         "title": "The New Yorker",
         "docs": "https://docs.rsshub.app/routes/traditional-media",
         "source": [
-          "/feed/:category/:subCategory"
+          "/:category"
         ],
-        "target": "/newyorker/:category/:subCategory?"
+        "target": "/newyorker/:category"
       }
     ]
   },
@@ -14033,6 +14501,19 @@
           "/"
         ],
         "target": "/readwise/list"
+      }
+    ]
+  },
+  "rebase.network": {
+    "_name": "Rebase Network",
+    ".": [
+      {
+        "title": "Web3 Geek Daily",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/geekdaily"
+        ],
+        "target": "/rebase/geekdaily"
       }
     ]
   },
@@ -17205,6 +17686,19 @@
       }
     ]
   },
+  "towardsdatascience.com": {
+    "_name": "Towards Data Science",
+    ".": [
+      {
+        "title": "Towards Data Science",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/towardsdatascience/latest"
+      }
+    ]
+  },
   "tradingview.com": {
     "_name": "TradingView",
     ".": [
@@ -17493,7 +17987,8 @@
         "title": "Engineering",
         "docs": "https://docs.rsshub.app/routes/blog",
         "source": [
-          "/blog/pittsburgh/engineering"
+          "/:language/blog/engineering",
+          "/:language/blog"
         ],
         "target": "/uber/blog"
       }
@@ -18644,7 +19139,7 @@
         "target": "/xiaohongshu/board/:board_id"
       },
       {
-        "title": "Unknown",
+        "title": "用户笔记 全文",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
           "/user/profile/:user_id"
@@ -18989,6 +19484,14 @@
           "/brief"
         ],
         "target": "/yicai/brief"
+      },
+      {
+        "title": "轮播",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/"
+        ],
+        "target": "/yicai/carousel"
       },
       {
         "title": "关注",
