@@ -19203,7 +19203,7 @@
         "maintainers": [
           "syzq"
         ],
-        "description": "| 策略报告       | 宏观研究    | 券商晨报     | 行业研究 |\n  | -------------- | ----------- | ------------ | -------- |\n  | strategyreport | macresearch | brokerreport | industry |",
+        "description": "| 策略报告       | 宏观研究    | 券商晨报     | 行业研究 | 个股研报 |\n  | -------------- | ----------- | ------------ | -------- | -------- |\n  | strategyreport | macresearch | brokerreport | industry | stock    |",
         "location": "report/index.ts"
       },
       "/search/:keyword": {
@@ -22415,6 +22415,44 @@
     },
     "name": "福州地铁",
     "url": "www.fzmtr.com"
+  },
+  "galxe": {
+    "routes": {
+      "/quest/:alias": {
+        "path": "/quest/:alias",
+        "name": "Quest",
+        "url": "app.galxe.com",
+        "maintainers": [
+          "cxheng315"
+        ],
+        "example": "/galxe/quest/MissionWeb3",
+        "categories": [
+          "other"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "app.galxe.com/quest/:alias"
+            ],
+            "target": "/quest/:alias"
+          }
+        ],
+        "location": "index.ts"
+      }
+    },
+    "name": "Galxe",
+    "url": "app.galxe.com",
+    "zh": {
+      "name": "銀河"
+    }
   },
   "gameapps": {
     "routes": {
@@ -27580,6 +27618,47 @@
     },
     "name": "Grub Street",
     "url": "grubstreet.com"
+  },
+  "gs": {
+    "routes": {
+      "/developer/blog": {
+        "path": "/developer/blog",
+        "categories": [
+          "blog"
+        ],
+        "example": "/gs/developer/blog",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "developer.gs.com/blog/posts"
+            ],
+            "target": "/developer/blog"
+          }
+        ],
+        "name": "Goldman Sachs Developer Blog",
+        "zh": {
+          "name": "高盛开发者博客"
+        },
+        "maintainers": [
+          "chesha1"
+        ],
+        "location": "developer/blog.ts"
+      }
+    },
+    "name": "Goldman Sachs",
+    "url": "goldmansachs.com",
+    "zh": {
+      "name": "高盛"
+    }
   },
   "guancha": {
     "routes": {
@@ -56349,6 +56428,37 @@
           "MeanZhang"
         ],
         "location": "keyword.ts"
+      },
+      "/product/:id": {
+        "path": "/product/:id",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/smzdm/product/zm5vzpe",
+        "parameters": {
+          "id": "商品 id，网址上直接可以看到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "wiki.smzdm.com/p/:id"
+            ],
+            "target": "/product/:id"
+          }
+        ],
+        "name": "商品",
+        "maintainers": [
+          "chesha1"
+        ],
+        "location": "product.ts"
       },
       "/ranking/:rank_type/:rank_id/:hour": {
         "path": "/ranking/:rank_type/:rank_id/:hour",
