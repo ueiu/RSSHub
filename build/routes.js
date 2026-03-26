@@ -14708,8 +14708,7 @@ export default {
           "hyoban"
         ],
         "categories": [
-          "social-media",
-          "popular"
+          "social-media"
         ],
         "view": 3,
         "example": "/bilibili/ranking/0",
@@ -44136,7 +44135,8 @@ export default {
       "/miit/wjgs": {
         "path": "/miit/wjgs",
         "categories": [
-          "government"
+          "government",
+          "popular"
         ],
         "example": "/gov/miit/wjgs",
         "parameters": {},
